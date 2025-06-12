@@ -1,7 +1,7 @@
 
-# 🌀 AnimeHub
+# 🌀 AniPlay
 
-Welcome to **AnimeHub** – your one-stop web app for anime exploration, obsession, and accidental 12-hour binges. Built for weebs, by weebs (and maybe a little too much coffee). 💻☕
+Welcome to **AniPlay** – your one-stop web app for anime exploration, obsession, and accidental 12-hour binges. Built for weebs, by weebs (and maybe a little too much coffee). 💻☕
 
 Whether you're searching for that one anime with the guy who yells a lot (*so… all of them?*), or just looking to fill the void left after the last season ended — AnimeHub has your back.
 
@@ -34,8 +34,8 @@ AnimeHub is forged in the fires of Mount TypeScript with some sleek frameworks a
 Clone the repo like you're stealing the last Pocky stick:
 
 ```bash
-git clone https://github.com/yourusername/animehub.git
-cd animehub
+git clone https://github.com/ovishkh/AniPlay-Nextjs.git
+cd AniPlay-Nextjs
 npm install
 npm run dev
 ````

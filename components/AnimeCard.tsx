@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { MotionDiv } from "./MotionDiv";
 
@@ -8,7 +10,13 @@ const variants = {
     visible: { opacity: 1 }
 };
 
-export const AnimeCard = ({ anime, index }: AnimeCard) => (
+interface AnimeCardProps {
+    anime: any;
+    index: number;
+    onAnimeClick: (anime: any) => void;
+}
+
+export const AnimeCard = ({ anime, index, onAnimeClick }: AnimeCardProps) => (
     <MotionDiv
         variants={variants}
         initial="hidden"
@@ -19,7 +27,8 @@ export const AnimeCard = ({ anime, index }: AnimeCard) => (
             duration: 0.5
         }}
         viewport={{ amount: 0 }}
-        className="relative w-full max-w-sm rounded"
+        className="relative w-full max-w-sm cursor-pointer rounded transition-transform duration-300 hover:scale-105"
+        onClick={() => onAnimeClick(anime)}
     >
         <div className="relative h-[37vh] w-full">
             <Image
@@ -28,6 +37,16 @@ export const AnimeCard = ({ anime, index }: AnimeCard) => (
                 fill
                 className="rounded-xl object-cover"
             />
+            {/* Play button overlay */}
+            <div className="group absolute inset-0 flex items-center justify-center rounded-xl bg-black bg-opacity-0 transition-all duration-300 hover:bg-opacity-40">
+                <div className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="rounded-full bg-orange-500 p-4">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className="flex flex-col gap-3 py-4">
             <div className="flex items-center justify-between gap-1">

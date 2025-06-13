@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "pnpm dlx prettier --write . && next dev --experimental-https",
+        "dev": "pnpm dlx prettier --write . && next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",

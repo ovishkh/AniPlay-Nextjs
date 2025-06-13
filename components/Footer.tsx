@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Footer = () => (
     <footer className="flex flex-wrap items-center justify-between gap-2 bg-[#161921] px-8 py-4 sm:px-16">
-        <p className="text-base font-bold text-white">@2023 EpicAnimeVault</p>
+        <p className="text-base font-bold text-white">@2023 AniPlay</p>
         <Image src="./logo.svg" alt="logo" width={47} height={44} className="object-contain" />
         <div className="flex items-center gap-6">
             <Image
